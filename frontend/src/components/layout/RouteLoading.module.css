@@ -1,0 +1,10 @@
+.page {
+  display: grid;
+  place-items: center;
+  min-height: 40vh;
+}
+
+.fullHeight {
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+}

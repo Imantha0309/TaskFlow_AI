@@ -1,0 +1,108 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  height: var(--header-height);
+  border-bottom: 1px solid var(--color-border);
+  background-color: rgb(255 255 255 / 85%);
+  backdrop-filter: blur(14px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 96rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.menuButton {
+  display: none;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition: background-color var(--transition-fast);
+}
+
+.menuButton:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.brandName {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.brandAccent {
+  color: var(--color-primary);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.email {
+  max-width: 16rem;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.signInLink {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  transition: background-color var(--transition-fast);
+}
+
+.signInLink:hover {
+  background-color: var(--color-primary-soft);
+}
+
+@media (max-width: 960px) {
+  .menuButton {
+    display: grid;
+  }
+
+  .inner {
+    padding: 0 var(--space-4);
+  }
+}
+
+@media (max-width: 600px) {
+  .email {
+    display: none;
+  }
+}
